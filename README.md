@@ -20,3 +20,11 @@ voidpush_front(T value);//Inserts an element at the front of the list
 voidpush_back(T value);//Inserts an element at the end of the list.
 
 Update mainLists.cpp to demonstrate the added functions.Youmaybuild your list from the user, using a loop and a sentinel value. Also, get from the user the values for pushing front and pushing back.
+
+---------
+
+Feedback:
+
+when pushing a node into a list, you must set newNode->next = nullptr or ensure it is done at somepoint. in your push_front, if(!head) leaves the ->next empty.
+
+if (nodePtr->next == nullptr) will always be true after the loop that gets to the node where nodePtr->next = nullptr.
